@@ -57,17 +57,14 @@
 
   #if canImport(UIKit.UIDevice) && !os(watchOS) && !os(tvOS)
     import UIKit.UIDevice
-    import DeviceDependency
     extension Notifications {
       /// A notification that posts when the battery level changes.
       @MainActor
       public var batteryLevelDidChange: MainActorSystemNotificationOf<Float> {
         .init(UIDevice.batteryLevelDidChangeNotification) { _ in
-          @Dependency(\.device.batteryLevel) var batteryLevel
-          return batteryLevel
+          return UIDevice.current.batteryLevel
         } placeholder: {
-          @Dependency(\.device.batteryLevel) var batteryLevel
-          return batteryLevel
+          return UIDevice.current.batteryLevel
         }
       }
 
@@ -75,11 +72,9 @@
       @MainActor
       public var batteryStateDidChange: MainActorSystemNotificationOf<UIDevice.BatteryState> {
         return .init(UIDevice.batteryStateDidChangeNotification) { _ in
-          @Dependency(\.device.batteryState) var batteryState
-          return batteryState
+          return UIDevice.current.batteryState
         } placeholder: {
-          @Dependency(\.device.batteryState) var batteryState
-          return batteryState
+          return UIDevice.current.batteryState
         }
       }
     }
