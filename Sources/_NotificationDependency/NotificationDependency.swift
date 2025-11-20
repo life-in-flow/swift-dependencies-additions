@@ -2,7 +2,6 @@
   @_exported import Dependencies
   @_exported import DependenciesAdditionsBasics
   import Foundation
-  import NotificationCenterDependency
 
   // TODO: Rework documentations example to be more illustrative of each configuraiton.
 
