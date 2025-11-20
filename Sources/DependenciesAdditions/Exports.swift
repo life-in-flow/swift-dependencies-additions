@@ -12,4 +12,3 @@
 @_exported import PersistentContainerDependency
 @_exported import ProcessInfoDependency
 @_exported import UserDefaultsDependency
-@_exported import UserNotificationsDependency
