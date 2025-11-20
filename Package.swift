@@ -15,7 +15,6 @@ import PackageDescription
 /// - `DataDependency`:                `\.dataReader` and `\.dataWriter`
 /// - `DeviceDependency`:              `\.device` and `\.deviceCheckDevice`
 /// - `LoggerDependency`:              `\.logger`
-/// - `NotificationCenterDependency`:  `\.notificationCenter`
 /// - `PathDependency`:                `\.path`
 /// - `PersistentContainerDependency`: `\.persitentContainer`
 /// - `ProcessInfoDependency`:         `\.processInfo`
@@ -167,7 +166,6 @@ let package = Package(
         "DependenciesAdditionsBasics",
         "DeviceDependency",
         "LoggerDependency",
-        "NotificationCenterDependency",
         "PathDependency",
         "PersistentContainerDependency",
         "ProcessInfoDependency",
@@ -247,7 +245,6 @@ let package = Package(
         "AccessibilityDependency",
         "DependenciesAdditionsBasics",
         "DeviceDependency",
-        "NotificationCenterDependency",
       ]
     ),
 
@@ -255,22 +252,6 @@ let package = Package(
       name: "_NotificationDependencyTests",
       dependencies: [
         "_NotificationDependency"
-      ]
-    ),
-
-    .target(
-      name: "NotificationCenterDependency",
-      dependencies: [
-        .product(name: "Dependencies", package: "swift-dependencies"),
-        .product(name: "IssueReporting", package: "xctest-dynamic-overlay"),
-      ]
-    ),
-
-    .testTarget(
-      name: "NotificationCenterDependencyTests",
-      dependencies: [
-        "DependenciesAdditionsBasics",
-        "NotificationCenterDependency",
       ]
     ),
 
@@ -411,7 +392,6 @@ func addIndividualProducts() {
     .library(name: "DataDependency", targets: ["DataDependency"]),
     .library(name: "DeviceDependency", targets: ["DeviceDependency"]),
     .library(name: "LoggerDependency", targets: ["LoggerDependency"]),
-    .library(name: "NotificationCenterDependency", targets: ["NotificationCenterDependency"]),
     .library(name: "PathDependency", targets: ["PathDependency"]),
     .library(name: "PersistentContainerDependency", targets: ["PersistentContainerDependency"]),
     .library(name: "ProcessInfoDependency", targets: ["ProcessInfoDependency"]),

@@ -8,7 +8,6 @@
 @_exported import DependenciesAdditionsBasics
 @_exported import DeviceDependency
 @_exported import LoggerDependency
-@_exported import NotificationCenterDependency
 @_exported import PathDependency
 @_exported import PersistentContainerDependency
 @_exported import ProcessInfoDependency
