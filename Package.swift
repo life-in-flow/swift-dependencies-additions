@@ -15,9 +15,8 @@ import PackageDescription
 /// - `DataDependency`:                `\.dataReader` and `\.dataWriter`
 /// - `DeviceDependency`:              `\.device` and `\.deviceCheckDevice`
 /// - `LoggerDependency`:              `\.logger`
-/// - `NotificationCenterDependency`:  `\.notificationCenter`
 /// - `PathDependency`:                `\.path`
-/// - `PersistentContainerDependency`: `\.persitentContainer`
+/// - `PersistentContainerDependency`: `\.persistentContainer`
 /// - `ProcessInfoDependency`:         `\.processInfo`
 /// - `UserDefaultsDependency`:        `\.userDefaults`
 /// - `UserNotificationsDependency`:   `\.userNotificationCenter`
@@ -43,9 +42,9 @@ let package = Package(
     .library(name: "_SwiftUIDependency", targets: ["_SwiftUIDependency"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.3.5"),
+    .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.10.0"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.2.3"),
+    .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.8.1"),
   ],
   targets: [
 
